@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arena Quiz | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+  <!-- Background particles -->
+  <canvas id="bgParticles"></canvas>
+
+  <!-- Floating icons -->
+  <div class="floating-icons">
+    <span style="left:10%; animation-delay:0s;">💡</span>
+    <span style="left:35%; animation-delay:2s;">🧠</span>
+    <span style="left:55%; animation-delay:4s;">⚡</span>
+    <span style="left:75%; animation-delay:6s;">📚</span>
+    <span style="left:90%; animation-delay:8s;">🎯</span>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Arena Quiz 🧠</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="signup.html" id="signupLink">Signup</a>
+      <a href="leaderboard.html">🏆 Leaderboard</a>
+      <a href="compete.html">⚔️ Compete with Friends</a>
+      <a href="profile.html" id="profileLink" style="display:none;">👤 Profile</a>
+    </div>
+  </div>
+
+  <!-- Hero section -->
+  <div class="hero">
+    <h1>Welcome to Arena Quiz</h1>
+    <p id="typedText"></p>
+    <button id="startQuizButton" class="start-btn">Start Quiz 🚀</button>
+  </div>
+
+  <!-- Chatbot icon -->
+  <div class="mascot" id="chatbotIcon" title="Chat with Quizzy 🤖">🤖</div>
+
+  <script src="js/script.js"></script>
+  <script>
+  function goBack() {
+    if (document.referrer && document.referrer !== window.location.href) {
+      // ✅ If a previous page exists, go back
+      window.history.back();
+    } else {
+      // 🏠 If opened directly (no referrer), go to home
+      window.location.href = "index.html";
+    }
+  }
+</script>
+
+</body>
+</html>
