@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏆 Leaderboard | Arena Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="leaderboard.css" />
+</head>
+<body>
+  <!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+  <div class="leaderboard-container">
+    <h1>🏆 Arena Quiz Leaderboard</h1>
+    <p>Compete with your friends and climb the ranks!</p>
+
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="clearBtn">🗑 Clear Leaderboard</button>
+    <a href="index.html" class="back">⬅ Back to Home</a>
+  </div>
+
+  <script src="js/leaderboard.js"></script>
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

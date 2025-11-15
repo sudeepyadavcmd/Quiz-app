@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Class</title>
+
+  <!-- 🌈 Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="class-select">
+  <!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+  <!-- ✅ Navbar container -->
+  <div id="navbar-container"></div>
+
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div class="logo">QZ</div>
+        <div>
+          <div class="h1">Select Your Class</div>
+          <div class="subtitle">Choose your school class to see relevant subjects.</div>
+        </div>
+      </div>
+
+      <div style="height: 14px"></div>
+
+      <!-- 🧩 Class options will be injected by JS -->
+      <div id="classes" class="options-grid"></div>
+
+      <div class="center-button">
+        <button id="nextBtn" class="btn btn-primary" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🧠 Scripts -->
+  <script src="data/questions-data_1to8.js"></script>
+  <script src="data/questions-data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/class-select.js"></script>
+
+  <!-- ✅ Add this script at the END -->
+  <script>
+    // Load navbar dynamically
+    fetch("../navbar.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+      })
+      .catch(err => console.error("Navbar load error:", err));
+  </script>
+
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Profile | Arena Quiz</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+  <div class="profile-container">
+    <h1>👤 Your Profile</h1>
+
+    <div class="profile-card">
+      <p><strong>Name:</strong> <span id="profileName"></span></p>
+      <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+    </div>
+
+    <div class="button-group">
+      <button id="homeBtn" class="home-btn">🏠 Home</button>
+      <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

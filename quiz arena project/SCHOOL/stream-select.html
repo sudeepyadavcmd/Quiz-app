@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Select Stream</title>
+
+  <!-- ✅ Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="stream-select">
+  <div class="container">
+    <div class="card">
+      <h1 style="text-align:center;">Select Your Stream</h1>
+
+      <!-- 🧠 Stream Options -->
+      <div id="streams" class="options-grid"></div>
+
+      <!-- 🔘 Navigation Buttons -->
+      <div style="display:flex; justify-content:space-between; margin-top:20px;">
+        <button id="backBtn" class="btn btn-ghost">⬅ Back</button>
+        <button id="nextBtn" class="btn btn-primary" disabled>Next ➡</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Scripts -->
+  <script src="data/questions-data_1to8.js"></script>
+  <script src="data/questions-data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/stream-select.js"></script>
+</body>
+</html>

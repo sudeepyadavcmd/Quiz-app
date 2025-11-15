@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #001428, #002d4d);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.leaderboard-container {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.3);
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00c3ff;
+  margin-bottom: 10px;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+button {
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00c3ff;
+}
+
+a.back {
+  display: block;
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+a.back:hover {
+  text-decoration: underline;
+}
+/* 🔙 Back Button Styling */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: rgba(0, 212, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+}

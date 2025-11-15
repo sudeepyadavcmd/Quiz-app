@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compete with Friends | Arena Quiz</title>
+  <link rel="stylesheet" href="compete.css" />
+</head>
+<body>
+    <!-- 🔙 Back Button -->
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+  <div class="container">
+    <h1>⚔️ Compete with Friends</h1>
+
+    <!-- Step 1: Enter player names -->
+    <div id="setupScreen">
+      <p>Enter player names to start the challenge!</p>
+      <input type="text" id="player1" placeholder="Player 1 Name" />
+      <input type="text" id="player2" placeholder="Player 2 Name" />
+      <button id="startBtn">Start Match 🚀</button>
+    </div>
+
+    <!-- Step 2: Quiz screen -->
+    <div id="quizScreen" style="display:none;">
+      <h2 id="turnInfo"></h2>
+      <p id="questionText"></p>
+      <div id="answers"></div>
+      <button id="nextBtn" style="display:none;">Next ➡️</button>
+    </div>
+
+    <!-- Step 3: Result screen -->
+    <div id="resultScreen" style="display:none;">
+      <h2>🏁 Match Over!</h2>
+      <p id="score1"></p>
+      <p id="score2"></p>
+      <h3 id="winnerText"></h3>
+      <button id="restartBtn">Play Again 🔁</button>
+      <button id="homeBtn">🏠 Home</button>
+    </div>
+  </div>
+
+  <script src="compete.js"></script>
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

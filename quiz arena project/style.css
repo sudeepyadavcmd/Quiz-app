@@ -1,0 +1,253 @@
+/* ======================================
+   🎨 Arena Quiz — Home Page Styling
+   ====================================== */
+
+:root {
+  --bg1: #001428;
+  --bg2: #00293b;
+  --accent1: #00d4ff;
+  --accent2: #0066ff;
+  --text: #e9f7ff;
+  --muted: rgba(255, 255, 255, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, var(--bg1), var(--bg2));
+  overflow: hidden;
+  color: var(--text);
+}
+
+/* ======================================
+   🌌 Background Particles
+   ====================================== */
+#bgParticles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ======================================
+   💫 Floating Icons Animation
+   ====================================== */
+.floating-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-icons span {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 40px;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ======================================
+   🧭 Navbar
+   ====================================== */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent1);
+  text-shadow: 0 0 15px var(--accent1);
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: var(--accent1);
+}
+
+/* ======================================
+   👤 Profile Icon in Navbar
+   ====================================== */
+#profileIcon {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 0 12px rgba(0, 195, 255, 0.4);
+  transition: 0.3s;
+}
+
+#profileIcon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px var(--accent1);
+}
+
+/* ======================================
+   🦸 Hero Section
+   ====================================== */
+.hero {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 40px rgba(0, 195, 255, 0.2);
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 0 25px var(--accent1);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 30px;
+  min-height: 30px;
+}
+
+/* ======================================
+   🚀 Start Button
+   ====================================== */
+.start-btn,
+.btn {
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.4);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.start-btn:hover,
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px var(--accent1);
+}
+
+/* ======================================
+   🤖 Chatbot Icon
+   ====================================== */
+.mascot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 5;
+}
+
+.mascot:hover {
+  transform: translateY(-6px) rotate(-8deg);
+  box-shadow: 0 0 25px var(--accent1);
+}
+
+/* ======================================
+   📅 Footer
+   ====================================== */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+/* ======================================
+   📱 Responsive Design
+   ====================================== */
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 140px;
+    width: 90%;
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn,
+  .start-btn {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links a {
+    margin-left: 10px;
+  }
+}

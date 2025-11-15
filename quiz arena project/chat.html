@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzy Chatbot 🤖 | Arena Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <!-- 🔙 Back Button -->
+ <div class="back-btn" onclick="goBack()">⬅ Back</div>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Quizzy 🤖</h2>
+    </div>
+
+    <div class="chat-content" id="chatContent">
+      <div class="bot-message"><strong>Quizzy:</strong> Hello! 👋 I’m your quiz assistant.<br>Ask me anything about Arena Quiz!</div>
+    </div>
+
+    <div class="chat-input-box">
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button id="sendBtn">➤</button>
+    </div>
+  </div>
+
+  <script src="js/chat.js"></script>
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

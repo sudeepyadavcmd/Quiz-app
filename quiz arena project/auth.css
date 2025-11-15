@@ -1,0 +1,136 @@
+/* 🌌 Background setup */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #001428, #00293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* 🔹 Main box */
+.auth-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 195, 255, 0.3);
+  padding: 40px 50px;
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 🧠 Title */
+.auth-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  -webkit-background-clip: text;
+  background-clip: text;              /* for non-webkit browsers */
+  -webkit-text-fill-color: transparent;
+  color: #00d4ff;                     /* fallback text color */
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+
+
+/* ✍️ Input fields */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+.auth-container input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.4);
+}
+
+/* 🚀 Button */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.auth-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00d4ff;
+}
+
+/* 🔁 Links (login ↔ signup) */
+.auth-container p {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.auth-container a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive */
+@media (max-width: 500px) {
+  .auth-container {
+    width: 90%;
+    padding: 30px;
+  }
+}
+/* 🔙 Back Button Styling */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: rgba(0, 212, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+}

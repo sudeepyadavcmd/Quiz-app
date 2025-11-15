@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body data-page="quiz">
+    <div class="container">
+      <div id="quizCard" class="card">
+        <!-- Top Row -->
+        <div class="top-row">
+          <div class="badge">
+            Q <span id="q-index">1</span>/<span id="q-total">20</span>
+          </div>
+          <div class="status"></div>
+          <div class="status">
+            <div class="timer-circle">
+             <svg class="progress-ring" width="60" height="60">
+                 <circle class="progress-ring__circle" stroke="#00ff99" stroke-width="6" fill="transparent" r="26" cx="30" cy="30"></circle>
+             </svg>
+          <div id="timer-label" class="timer-text">10</div>
+         </div>
+
+          </div>
+        </div>
+
+        <!-- Question Area -->
+        <div id="question-text" class="question-box">Loading questions...</div>
+
+        <!-- Answers -->
+        <div id="answer-buttons" class="answers-grid"></div>
+
+        <!-- Buttons -->
+        <div style="display:flex; gap:12px; justify-content:flex-end;">
+          <button id="next-btn" class="btn btn-primary" style="display:none;">Next</button>
+          <button id="submit-btn" class="btn btn-primary" style="display:none;">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  Correct JS file paths -->
+    <script src="./data/questions-data_1to8.js"></script>
+    <script src="./data/questions-data.js"></script>
+      
+    <!-- Utility and logic scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/quiz.js"></script>
+     <!--  Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/main.js"></script>
+    
+
+  </body>
+</html>

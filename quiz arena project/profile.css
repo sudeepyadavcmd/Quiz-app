@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #001428, #00293b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.profile-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
+  width: 360px;
+}
+
+.profile-card {
+  margin: 20px 0;
+  text-align: left;
+  background: rgba(0, 195, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.logout-btn,
+.home-btn {
+  background: linear-gradient(90deg, #00d4ff, #0066ff);
+  border: none;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.logout-btn:hover,
+.home-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00d4ff;
+}

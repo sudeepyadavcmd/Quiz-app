@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="result">
+  <div class="container">
+    <div class="card">
+      <h2>🎯 Quiz Completed!</h2>
+
+      <p id="final-score">Score: 0 / 0</p>
+      <p id="percent-score">Accuracy: 0%</p>
+      <p id="result-stats">✅ Correct: 0 | ❌ Wrong: 0 | 🕒 Time: 0s</p>
+
+      <h3>📋 Question Review</h3>
+      <div id="summary-list" class="summary-box"></div>
+
+      <div class="center-buttons">
+        <button id="restartBtn" class="btn btn-primary">🔄 Restart</button>
+        <button id="homeBtn" class="btn btn-ghost">🏠 class </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>
